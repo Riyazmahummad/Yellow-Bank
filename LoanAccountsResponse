@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "loan_id": "LN001",
+      "loan_type": "Home Loan",
+      "tenure": "15 years",
+      "internal_code": "X23AD",
+      "audit_date": "2022-01-01"
+    },
+    {
+      "loan_id": "LN002",
+      "loan_type": "Car Loan",
+      "tenure": "5 years",
+      "internal_code": "Y89RT",
+      "audit_date": "2023-02-11"
+    }
+  ]
+}
