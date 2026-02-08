@@ -1,0 +1,17 @@
+{
+  "name": "loanDetails",
+  "description": "Fetches and displays details of a selected loan account",
+  "inputs": ["loan_id"],
+  "steps": [
+    {
+      "type": "api_call",
+      "endpoint": "/loanDetails",
+      "method": "GET",
+      "output": "loanDetails"
+    },
+    {
+      "type": "drm_render",
+      "message": "Displaying loan details with CSAT option"
+    }
+  ]
+}
