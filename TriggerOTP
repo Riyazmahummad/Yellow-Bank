@@ -1,0 +1,21 @@
+{
+  "name": "triggerOTP",
+  "description": "Triggers OTP for user authentication",
+  "inputs": ["phone", "dob"],
+  "steps": [
+    {
+      "type": "api_call",
+      "endpoint": "/otp",
+      "method": "GET",
+      "output": "otp"
+    },
+    {
+      "type": "user_prompt",
+      "message": "An OTP has been sent to your registered number. Please enter the OTP."
+    },
+    {
+      "type": "validation",
+      "logic": "userOTP == otp"
+    }
+  ]
+}
