@@ -1,0 +1,21 @@
+{
+  "name": "getLoanAccounts",
+  "description": "Fetches loan accounts and projects only required fields to optimize tokens",
+  "inputs": ["userId"],
+  "steps": [
+    {
+      "type": "api_call",
+      "endpoint": "/loans",
+      "method": "GET",
+      "output": "rawAccounts"
+    },
+    {
+      "type": "projection",
+      "logic": "map rawAccounts to only loan_id, loan_type, tenure"
+    },
+    {
+      "type": "drm_render",
+      "message": "Displaying loan accounts as selectable cards"
+    }
+  ]
+}
