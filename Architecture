@@ -1,0 +1,11 @@
+# Yellow Bank GenAI Agent – Architecture
+
+User  
+→ Yellow.ai GenAI Agent  
+→ OTP API (Beeceptor)  
+→ Loan Accounts API (Beeceptor)  
+→ Loan Details API (Beeceptor)  
+→ CSAT Feedback Agent  
+
+Token Optimization Layer:
+A projection step filters raw API responses and forwards only necessary fields to the LLM.
